@@ -4,17 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { AsyncBannerComponent } from './async-banner/async-banner.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import {UserService} from "./model/user.service";
+import {BannerComponent} from "./banner-inline.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AsyncBannerComponent,
+    WelcomeComponent,
+      BannerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [UserService],
+  bootstrap: [WelcomeComponent]
 })
 export class AppModule { }
