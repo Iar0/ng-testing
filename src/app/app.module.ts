@@ -8,20 +8,27 @@ import { AsyncBannerComponent } from './async-banner/async-banner.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {UserService} from "./model/user.service";
 import {BannerComponent} from "./banner-inline.component";
+import { TwainComponent } from './twain/twain.component';
+import {TwainService} from "./model/twain.service";
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardHeroComponent } from './dashboard/dashboard-hero.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AsyncBannerComponent,
     WelcomeComponent,
-      BannerComponent
+      BannerComponent,
+      TwainComponent,
+      DashboardComponent,
+      DashboardHeroComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [UserService],
-  bootstrap: [WelcomeComponent]
+  providers: [UserService, TwainService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

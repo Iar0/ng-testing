@@ -14,7 +14,7 @@ describe('WelcomeComponent', () => {
   let userService: UserService;
 
   beforeEach(() => {
-    // stub UserService for test purposes
+    //stub UserService for test purposes
     let userServiceStub = {
       isLoggedIn: true,
       user: { name: 'Test User'}
