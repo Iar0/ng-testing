@@ -34,20 +34,20 @@ describe('DashboardHeroComponent', () => {
     component = fixture.componentInstance;
     heroEl   = fixture.debugElement.query(By.css('.hero')); // find hero
     heroNativeElement = heroEl.nativeElement;
-    fixture.detectChanges(); // trigger initial data binding
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display hero name', () => {
+  it('should display passed hero name', () => {
+    fixture.detectChanges();
     const expectedName = component.hero;
-    console.log(expectedName);
     expect(heroNativeElement.textContent).toContain(expectedName);
   });
 
   it('should raise selected event when clicked', () => {
+    fixture.detectChanges();
     heroEl.triggerEventHandler('click', null);
     // selected hero should be the same data bound hero
     expect(component.selectedHero).toBe(component.hero);

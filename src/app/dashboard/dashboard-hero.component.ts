@@ -9,7 +9,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 })
 export class DashboardHeroComponent {
 
-  @Input() hero = 'Michele';
+  @Input() hero: string;
   @Output() selected = new EventEmitter();
 
   onClick() {

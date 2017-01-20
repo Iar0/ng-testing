@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-dashboard',
   template: `
     <app-dashboard-hero [hero]="hero" (selected)="onSelected($event)"></app-dashboard-hero>
   `,
